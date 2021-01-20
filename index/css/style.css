@@ -1,0 +1,251 @@
+.x {
+	/* debugging */
+	border: 1px solid red;
+}
+
+/* bootstrap classes */
+.btn:focus {
+	box-shadow: none;
+}
+.link {
+	text-decoration: underline;
+	color: rgb(78, 130, 180);
+	text-decoration-color: rgb(78, 130, 180);
+}
+.jumbotron {
+	padding: 20px;
+	background-color: rgba(224, 236, 248, 0.7);
+	font-style: oblique;
+}
+
+* {
+	--trans: all 0.3s ease;
+}
+body {
+	background-color: #E0ECF8;
+}
+main {
+	overflow: hidden;
+	background-color: white;
+}
+
+/* nav */
+#menu-btn {
+	position: fixed;
+	z-index: 2;
+	top: 12.3px;
+	right: 17px;
+	padding: 0;
+	height: 0;
+}
+#menu-btn > img {
+	width: 20px;
+}
+#menu-btn > img.toggled {
+	filter: invert(100%);
+	transition: var(--trans);
+}
+#menu {
+	z-index: 1;
+	opacity: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	justify-content: space-around;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#menu.toggled {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.mb { // menu buttons
+	white-space: nowrap;
+	padding: 0;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+.mb:hover {
+	text-decoration: underline;
+	color: white;
+	text-decoration-color: white;
+}
+.mb:focus {
+	text-decoration: underline;
+	color: rgb(78, 130, 180);
+	text-decoration-color: rgb(78, 130, 180);
+}
+
+/* header */
+#logo {
+	height: 50px;
+	margin: 5px 0 0 12px;
+}
+.ssb { // section selector buttons
+	white-space: nowrap;
+	padding: 0;
+	display: block;
+	border-bottom: solid 1px black;
+	border-radius: 0;
+	opacity: 0.3;
+	font-weight: bold;
+	font-size: 13px;
+	padding-bottom: 10px;
+	height: 40px;
+	line-height: 40px;
+	transition: var(--trans);
+}
+.ssb.toggled {
+	opacity: 1;
+	border-bottom: solid 1px black;
+}
+
+/* sections */
+#sections-container {
+	width: 400%;
+	position: relative;
+	transition: var(--trans);
+	margin: 0;
+	left: 0;
+}
+.section-label {
+	margin: 0;
+	padding: 25px 10px 10px;
+	font-size: 1.15rem;
+	font-weight: bold;
+}
+.player-link {
+	padding: 0;
+	text-align: center;
+	padding-top: 25px;
+	padding-right: 15px;
+	white-space: nowrap;
+	text-align: right;
+}
+
+/* contents/tracks */
+.content {
+	border-bottom: solid 0.5px rgba(0, 0, 0, 0.2);
+	transition: var(--trans);
+}
+.content.toggled {
+	border-bottom: solid 0.5px black;
+}
+.content > button {
+	opacity: 0.6;
+	font-weight: bold;
+	font-size: 0.9rem;
+	width: 100%;
+	text-align: left;
+	transition: var(--trans);
+	padding: 12px;
+}
+.content > button.toggled {
+	opacity: 1;
+}
+.content-info-list {
+	padding: 10px 10px 10px 25px;
+	background-color: #f0f8ff;
+	transition: var(--trans);
+	opacity: 0;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.6);
+	margin-bottom: 10px;
+}
+.content-info-list.toggled {
+	opacity: 1;
+}
+.content-info-item {
+	margin-left: 30px;
+	list-style-type: circle;
+	font-weight: normal;
+	color: black;
+}
+.play-btn {
+	width: 40px;
+	height: 40px;
+	background-color: #E0ECF8;
+	border-radius: 100%;
+}
+.play-btn:hover {
+	box-shadow: 0 0 0 1px hsla(210, 76%, 57%, 0.5);
+}
+.play-btn:focus {
+	border: 1px solid hsl(210, 58%, 69%);
+	box-shadow: 0 0 0 1px hsla(210, 76%, 57%, 0.5);
+}
+.play-btn::after {
+	content: "";
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	border-top: 10px solid transparent;
+	border-left: 17px solid black;
+	border-bottom: 10px solid transparent;
+}
+.play-btn.toggled::after {
+	left: 2.3px;
+	top: 3.2px;
+	width: 5.5px;
+	height: 17px;
+	background-color: black;
+	border: none;
+}
+.play-btn.toggled::before {
+	content: "";
+	display: inline-block;
+	position: relative;
+	width: 5.5px;
+	height: 17px;
+	top: 3.2px;
+	left: -3.2px;
+	background-color: black;
+}
+
+/* middle section */
+#mid-sec {
+	padding: 50px 40px 30px 40px;
+	margin-top: 50px;
+	border-top: solid 1px rgba(0, 0, 0, 0.3);
+}
+#mid-sec > section {
+	padding-left: 20px;
+}
+#mid-sec h2 {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+#mid-sec h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+	opacity: 0.6;
+}
+#mid-sec li {
+	list-style-type: circle;
+}
+#mid-sec a {
+	font-size: 0.9rem;
+}
+
+/* footer */
+footer {
+	background-color: #E0ECF8;
+	padding: 30px 30px 20px 30px;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 0.8rem;
+}
+footer h4 {
+	color: black;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.footer-btn {
+	white-space: nowrap;
+	padding: 0;
+	display: block;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 1em;
+}
